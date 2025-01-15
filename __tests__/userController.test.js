@@ -59,13 +59,13 @@ describe('Pruebas de los controladores de los usuarios', () => {
 
             const res = await supertest(app)
                 .put(`/usuarios/actualizar/${createdUser._id}`)
-                //.set('Authorization', `Bearer ${token}`)  // Agrega el token en la cabecera
                 .send(updatedData);
 
             expect(res.statusCode).toBe(200);
             expect(res.body).toHaveProperty('mensaje', 'Usuario actualizado correctamente');
         });
     });
+
     // Peticion DELETE
     describe('Pruebas DELETE /eliminar/:id', () => {
         it('Debería eliminar un usuario existente correctamente', async () => {

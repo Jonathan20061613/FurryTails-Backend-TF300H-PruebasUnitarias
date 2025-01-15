@@ -109,7 +109,7 @@ describe('Pruebas de los controladores de usuarios', () => {
         expect(res.body).toHaveProperty('mensaje', 'Usuario creado correctamente');
     });
 });
-![PRUEBA DE USUARIO](./image.png)
+![PRUEBA DE USUARIO](https://cdn.discordapp.com/attachments/1328487002794098889/1328885908509954100/image.png?ex=678854f2&is=67870372&hm=1a1dd06b91e77a64cce6a3e47d82d72d1c937cd1bea7bd75439394abf38aee95&)
 
 
 🔒 Pruebas para Administradores
@@ -131,6 +131,8 @@ it('Debería obtener todos los administradores almacenados', async () => {
     expect(res.statusCode).toBe(200);
     expect(res.body.admins).toBeInstanceOf(Array);
 });
+
+![PRUEBA DE ADMIN](https://cdn.discordapp.com/attachments/1328487002794098889/1328897025265106996/image.png?ex=67885f4c&is=67870dcc&hm=0ff20724cf050edefb5042afc93092c39ceccedcabaa15946e2825b1e410f8d3&)
 
 🐾 Pruebas para Mascotas
 
@@ -159,6 +161,8 @@ it('Debería registrar una nueva mascota correctamente', async () => {
     expect(res.statusCode).toBe(201);
     expect(res.body).toHaveProperty('mensaje', 'Mascota registrada correctamente');
 });
+
+![PRUEBA DE MASCOTAS](https://cdn.discordapp.com/attachments/1328487002794098889/1328897025265106996/image.png?ex=67885f4c&is=67870dcc&hm=0ff20724cf050edefb5042afc93092c39ceccedcabaa15946e2825b1e410f8d3&)
 
 🔄 Ejecución de las Pruebas
 
