@@ -162,7 +162,7 @@ it('Debería registrar una nueva mascota correctamente', async () => {
     expect(res.body).toHaveProperty('mensaje', 'Mascota registrada correctamente');
 });
 
-![PRUEBA DE MASCOTAS](https://cdn.discordapp.com/attachments/1328487002794098889/1328897025265106996/image.png?ex=67885f4c&is=67870dcc&hm=0ff20724cf050edefb5042afc93092c39ceccedcabaa15946e2825b1e410f8d3&)
+![PRUEBA DE MASCOTAS](https://cdn.discordapp.com/attachments/1328487002794098889/1328902489503698944/image.png?ex=67886463&is=678712e3&hm=70514c4cb971261a36648287dfa838677d7eeeb32d769c38a4d80da41fdd433d&)
 
 🔄 Ejecución de las Pruebas
 
