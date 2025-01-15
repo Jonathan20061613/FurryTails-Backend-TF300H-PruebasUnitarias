@@ -88,7 +88,6 @@ export const putUserById = async (request, response) => {
         // Responder con el usuario actualizado
         return response.status(200).json({
             mensaje: 'Usuario actualizado correctamente',
-            datos: userUpdated
         });
 
     } catch (error) {
