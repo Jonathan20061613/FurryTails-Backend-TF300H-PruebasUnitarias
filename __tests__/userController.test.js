@@ -17,15 +17,15 @@ describe('Pruebas de los controladores de los usuarios', () => {
 
     // Datos de prueba genéricos
     const testUser = {
-        fullName: "Usuario de Prueba",
-        email: "testuser@example.com",
-        password: "password123",
+        fullName: "Usuario de Prueba33333",
+        email: "test333user@example.com",
+        password: "password123333",
         phone: "1234567890",
         isAdult: "true",
         address: "Calle Falsa 123"
     };
 
-    // Pruebas para la creación de usuario (POST)
+    // Peticion POST
     describe('Pruebas POST /crear', () => {
         it('Debería crear un usuario correctamente', async () => {
             const res = await supertest(app).post('/usuarios/crear').send(testUser);
@@ -41,7 +41,16 @@ describe('Pruebas de los controladores de los usuarios', () => {
             expect(res.body).toHaveProperty('mensaje', 'Ocurrió un error al crear un usuario');
         });
     });
+    // Peticion GET
+    describe('Pueba GET / User', () => {
+        it('Deberia indicar que no hay usuarios almacenados', async () => {
+            const res = await supertest(app).get('/usuarios/obtener');
+            expect(res.statusCode).toBe(200);
+            expect(res.body).toHaveProperty('mensaje', 'No hay usuarios almacenados');
+        });
+    });    
 
+    // Peticion PUT
     describe('Pruebas PUT /actualizar/:id', () => {
         it('Debería actualizar un usuario existente correctamente', async () => {
             const createdUser = await userModel.create(testUser); // Crea un usuario
@@ -57,7 +66,7 @@ describe('Pruebas de los controladores de los usuarios', () => {
             expect(res.body).toHaveProperty('mensaje', 'Usuario actualizado correctamente');
         });
     });
-
+    // Peticion DELETE
     describe('Pruebas DELETE /eliminar/:id', () => {
         it('Debería eliminar un usuario existente correctamente', async () => {
             const createdUser = await userModel.create(testUser); // Crea un usuario
